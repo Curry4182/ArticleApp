@@ -35,6 +35,7 @@ namespace ArticleApp.Models
                 .ToListAsync();
         }
 
+
         public async Task<Article> GetArticleByIdAsync(int id)
         {
             return await _context.Articles.Where(m => m.Id == id).SingleOrDefaultAsync();
