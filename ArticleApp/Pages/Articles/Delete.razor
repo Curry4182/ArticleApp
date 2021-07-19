@@ -1,7 +1,10 @@
-﻿@page "/Articles/Delete"
+﻿@page "/Articles/Delete/{Id:int}"
 
-<h3>Delete</h3>
+<h3>Delete다</h3>
 
-@code {
+
+@code{
+    [Parameter]
+    public int Id { get; set; }
 
 }
