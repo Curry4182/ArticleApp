@@ -55,7 +55,7 @@ else
     //페이저 기본값 설정
     private PagerBase pager;
 
-    private List<Article> articles;
+    private IEnumerable<Article> articles;
 
     protected override async Task OnInitializedAsync()
     {
@@ -64,7 +64,7 @@ else
             PageNumber = 1,//처음시작할 페이지
             PageIndex = 0, //처음시작 페이지, 1페이지는 0번째 인덱스
             PageSize = 2, //한페이지에 표시될 아이템
-            PagerButtonCount = 5 //보여질 페이지 버튼 개수
+            PagerButtonCount = 3 //보여질 페이지 버튼 개수
         };
 
         //[1] 전체데이터 모두 출력
@@ -74,7 +74,7 @@ else
         PagingResult<Article> pagingData = await ArticleRepository.GetAllAsync(pager.PageIndex, pager.PageSize);
 
         pager.RecordCount = pagingData.TotalRecords; // 총 레코드 수
-        articles = pagingData.Records.ToList(); //페이징 처리된 레코드
+        articles = pagingData.Records; //페이징 처리된 레코드
     }
 
     private async void PageIndexChanged(int pageIndex)
@@ -83,8 +83,8 @@ else
         pager.PageNumber = pageIndex + 1;
 
         var pagingData = await ArticleRepository.GetAllAsync(pager.PageIndex, pager.PageSize);
-        pager.RecordCount = pagingData.TotalRecords; // 총 레코드 수 
-        articles = pagingData.Records.ToList(); //페이징 처리된 레코드
+        pager.RecordCount = pagingData.TotalRecords; // 총 레코드 수
+        articles = pagingData.Records; //페이징 처리된 레코드
 
         StateHasChanged(); //현재 컴포넌트 재로드
     }
