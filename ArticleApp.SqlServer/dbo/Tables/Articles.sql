@@ -5,6 +5,9 @@ CREATE TABLE [dbo].[Articles]
 	[Title] NVarChar(255) Not Null,				  --제목 
 
 	[Content] NVarChar(Max) Null, --내용 
+
+	[IsPinned] Bit Null Default(0), -- 공지글 인가?
+
 	[CreatedBy] NVarChar(255) Null, --등록자(Creator)
 	[Created] DateTime Default(GetDate()), --생성일
 	[ModifiedBy] NVarChar(255) Null, --수정자(LastModifiedBy)
