@@ -2,9 +2,12 @@
 
 # 들어가기에 앞서
 
+
 현재 이프로젝트는 박용준님의 블레이저로 게시판 만들기 프로젝트를 따라하면서 만드는 프로젝트입니다 
 https://github.com/VisualAcademy/ArticleApp 이 프로젝트와 소스코드는 똑같을 수 있음을 알려드립니다. 
 
+강의내용 중 중요한 부분은 제 블로그에 정리하였습니다. 참고하시기 바랍니다. 
+https://computer-gopeoplewater.tistory.com/150
 
 # 게시판 프로젝트
 
