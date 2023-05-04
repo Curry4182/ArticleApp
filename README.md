@@ -7,6 +7,8 @@
 https://github.com/VisualAcademy/ArticleApp 이 프로젝트와 소스코드는 똑같을 수 있음을 알려드립니다. 
 
 강의내용 중 중요한 부분은 제 블로그에 정리하였습니다. 참고하시기 바랍니다. 
+
+(외부에서 볼 수 있도록 수정 하였습니다)
 https://computer-gopeoplewater.tistory.com/150
 
 # 게시판 프로젝트
